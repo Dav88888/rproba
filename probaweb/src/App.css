@@ -48,3 +48,12 @@ h5{
   background-color: #1A1F37;
   color: aliceblue;
 }
+input::placeholder{
+  color: white !important;
+}
+/*PiListChecksLight*/
+/*BsTextIndentLeft*/
+/*FaListCheck*/
+/*#179069 -sotet zold*/
+/*#05B26C -vilagosabb zold*/
+
