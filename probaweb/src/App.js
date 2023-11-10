@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { Card, Col, Container, Row } from 'react-bootstrap';
-import { Navbar } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import { NavDropdown } from 'react-bootstrap';
-import { Carousel } from 'react-bootstrap';
+import React from 'react';
+import { Card, Container,CardGroup } from 'react-bootstrap';
+import { NavDropdown,Nav,Navbar } from 'react-bootstrap';
+
 
 function App() {
   return (
@@ -37,55 +36,71 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    <Carousel>
-      <Carousel.Item>
-        <img
-        src='https://images.pexels.com/photos/5802893/pexels-photo-5802893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img
-        src='https://images.pexels.com/photos/16747711/pexels-photo-16747711/free-photo-of-fak-park-osz-felulnezet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img
-        src='https://images.pexels.com/photos/8548914/pexels-photo-8548914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    <hr/>
-    <Row xs={1} md={2} className="g-4">
-      {Array.from({ length: 4 }).map((_, idx) => (
-        <Col key={idx}>
-          <Card >
-            <Card.Img variant="top" src="https://images.pexels.com/photos/18908406/pexels-photo-18908406/free-photo-of-ut-utca-villamos-vonalak.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
+    <CardGroup>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+      </CardGroup>
+      <CardGroup>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+      </CardGroup>
+      <CardGroup>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+        <Card style={{ width: '11rem',height:'18rem', backgroundColor: '#00b26b',borderRadius: '0', marginBottom: '20px'}}>
+          <Card.Title>Card title</Card.Title>
+        <p>asfafssa</p>
+          {/* Kártya tartalma */}
+        </Card>
+    </CardGroup>
+    <footer>
+      <Navbar bg="dark" variant="dark" >
+        <Nav className="w-100 justify-content-end" style={{backgroundcolor: '#1A1F37'}}> 
+          <Nav.Link href="#home">Kezdőlap</Nav.Link>
+          <h5>|</h5>
+          <Nav.Link href="#about">Rólunk</Nav.Link>
+          <h5>|</h5>
+          <Nav.Link href="#contact">Kapcsolat</Nav.Link>
+        </Nav>
+      </Navbar>
+      <div className="text-center">
+        <p>Ez itt a lábléc tartalma.</p>
+      </div>
+    </footer>
     </Container>
     
   );

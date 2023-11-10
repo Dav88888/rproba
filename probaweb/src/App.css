@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+img{
+  width: 2000px;
+  height: 800px;
+}
+p{
+  background-color: #000000; 
+  color: #00b26b;
+}
+h5{
+  background-color: #1A1F37;
+  color: aliceblue;
+}
