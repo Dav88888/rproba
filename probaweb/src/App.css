@@ -40,10 +40,6 @@ img{
   width: 2000px;
   height: 800px;
 }
-p{
-  background-color: #000000; 
-  color: #00b26b;
-}
 h5{
   background-color: #1A1F37;
   color: aliceblue;
@@ -51,9 +47,16 @@ h5{
 input::placeholder{
   color: white !important;
 }
+
+/*https://images.unsplash.com/photo-1562422313-5195a5f0198a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D*/
+/*https://images.unsplash.com/photo-1633259584604-afdc243122ea?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D*/
 /*PiListChecksLight*/
 /*BsTextIndentLeft*/
 /*FaListCheck*/
-/*#179069 -sotet zold*/
-/*#05B26C -vilagosabb zold*/
+/*#179069-sotet zold*/
+/*#05B26C-vilagosabb zold*/
+/*#F5A32E-narancssarga*/
+/*#5EBE86-legvilagosabb zold*/
+/*#109E6A-legsotetebb zold*/
+/*color: #00b26b;-zold asszem*/
 
