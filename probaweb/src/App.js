@@ -7,6 +7,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { BsGeoAlt } from 'react-icons/bs';
 import { BsListCheck } from 'react-icons/bs';
 import { AiOutlineInfoCircle } from "react-icons/ai"
+import CardBody from 'react-bootstrap/CardBody'
 
 function App() {
   return (
@@ -16,9 +17,11 @@ function App() {
         <Navbar.Brand href="#home">
           <img src="https://hsa.hu/wp-content/uploads/2021/02/HSA_logo-e1596540553919.png" style={{width:'150px',height:'56px',marginBottom: '20px',marginTop: '20px',marginRight: '20px'}}/>
           </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        <Navbar.Collapse id="basic-navbar-nav" >
+          <Nav className="me-auto"  screenOptions={{
+        headerTintColor: 'red', // -----> by changing color from here
+    }}>
             <Nav.Link href="#home" style={{ color: 'white' }}>Állások</Nav.Link>
             <Nav.Link style={{ color: 'white' }}>|</Nav.Link>
             <Nav.Link href="#link" style={{ color: 'white' }}>Munkavállalóknak</Nav.Link>
@@ -36,58 +39,104 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-      <Row>
-        <Col sm={3}>
-          <Card style={{ width: '400px',height:'400px', backgroundColor: '#00b26b',borderRadius: '0', marginLeft: '20px',marginBottom: '10px',}}>
+
+    <div className="flex-container">
+    <Row id='elsosor'>
+      <Col sm={6}  id='elsofoszlop'>
+        <Row sm={8}  id='masodiksor(A)'>
+          <Col className="flex-item" sm={7} id='masodikoszlop(A)' style={{ width: '25rem',height:'25rem'}}>
+            <Card  style={{ width: '100%', height: '100%',backgroundColor: '#00b26b',borderRadius: '0',/* marginBottom: '10px',*/}}>
+            <CardBody style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'space-between' }}></CardBody>
             <Card.Title>Állások</Card.Title>
-            <p>1</p>
             {/* Kártya tartalma */}
-          </Card>
-        <Form inline>
-          <InputGroup className='bg-transparent' style={{width: '300px',color:'white', borderRadius: '0', borderWidth:'2px',marginBottom: '10px'}}>
-              <InputGroup.Text className='bg-transparent' style={{ borderRight: 'none',borderRadius: '0',borderWidth: '2px', marginLeft:'20px' }}>
-                  <BsListCheck size={24} color="white"/>
-              </InputGroup.Text>
-            <FormControl type="search" color="white" className='bg-transparent' placeholder="Mit keresel" style={{color:'white', borderLeft: 'none',borderRadius: '0',borderWidth:'2px' }} />
-          </InputGroup>
-        </Form>
-        <Form inline>
-          <InputGroup className='bg-transparent' style={{width: '300px',color:'white', borderRadius: '0', borderWidth:'2px'}}>
-              <InputGroup.Text className='bg-transparent' style={{ borderRight: 'none',borderRadius: '0',borderWidth: '2px', marginLeft:'20px'}}>
-                  <BsGeoAlt  size={24} color="white"/>
-              </InputGroup.Text>
-            <FormControl type="search" color="white" className='bg-transparent' placeholder="Hol keresel" style={{color:'white', borderLeft: 'none',borderRadius: '0',borderWidth:'2px' }} />
-          </InputGroup>
-          <Button variant="outline-success" style={{fontWeight: 'bold',width: '150px',color:'white', borderRadius: '0', borderWidth:'0px',backgroundColor:'#00b26b',marginTop: '10px', marginLeft:'20px'}}>Keresés</Button>
-        </Form>
-        </Col>
-        <Col >
-        <CardGroup>
-          <Card style={{ width: '50px',height:'400px', backgroundColor: '#F5A32E',borderRadius: '0', marginBottom: '10px'}}>
-            <Card.Title>Diplomásoknak</Card.Title>
-            <p>2</p>
-            {/* Kártya tartalma */}
-          </Card>
-          <Col >
-          <Card style={{ width: '10rem',height:'6rem', backgroundColor: '#5EBE86',borderRadius: '0', marginRight: '5px'}}>
-            <Card.Title>Munkavállalóknak</Card.Title>
-             <p>3</p>
+            </Card>
+          </Col>
+          <Col className="flex-item" sm={2} id='masodikoszlop(B)' style={{ width: '12.5rem',height:'25rem'}}>
+            <Card  style={{width: '100%', height: '100%', backgroundColor: '#F5A32E',borderRadius: '0', /*marginBottom: '10px'*/}}>
+            <CardBody style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'space-between' }}></CardBody>
+              <Card.Title>Diplomásoknak</Card.Title>
               {/* Kártya tartalma */}
             </Card>
-          <Card style={{ width: '10rem',height:'6rem', backgroundColor: '#00b26b',borderRadius: '0', marginRight: '5px'}}>
-          <Card.Title>Rólunk</Card.Title>
-            <p>4</p>
-            {/* Kártya tartalma */}
-          </Card>
           </Col>
-          <Card style={{ width: '10rem',height:'6rem', backgroundColor: '#00b26b',borderRadius: '0', marginRight: '5px'}}>
-          <Card.Title>Kep</Card.Title>
-            <p>5</p>
-            {/* Kártya tartalma */}
-          </Card>
-        </CardGroup>
+        </Row>
+      <Row  sm={4} id='masodiksor(B)'>
+        <Col className="flex-item2" sm={7} id='masodikoszlop(AA)' style={{width: '25rem',height: '12.5rem'}}>
+          <Form  inline style={{width: '100%'}}>
+            <InputGroup className='bg-transparent' style={{color:'white', borderRadius: '0', borderWidth:'2px',marginBottom: '10px'}}>
+                <InputGroup.Text className='bg-transparent' style={{ borderRight: 'none',borderRadius: '0',borderWidth: '2px',}}>
+                    <BsListCheck size={24} color="white"/>
+                </InputGroup.Text>
+              <FormControl type="search" color="white" className='bg-transparent' placeholder="Mit keresel" style={{color:'white', borderLeft: 'none',borderRadius: '0',borderWidth:'2px' }} />
+            </InputGroup>
+          
+            <InputGroup className='bg-transparent' style={{width: '100%',color:'white', borderRadius: '0', borderWidth:'2px'}}>
+                <InputGroup.Text className='bg-transparent' style={{ borderRight: 'none',borderRadius: '0',borderWidth: '2px', }}>
+                    <BsGeoAlt  size={24} color="white"/>
+                </InputGroup.Text>
+              <FormControl type="search" color="white" className='bg-transparent' placeholder="Hol keresel" style={{color:'white', borderLeft: 'none',borderRadius: '0',borderWidth:'2px' }} />
+            </InputGroup>
+            <Button variant="outline-success" style={{fontWeight: 'bold',width: '150px',color:'white', borderRadius: '0', borderWidth:'0px',backgroundColor:'#00b26b',marginTop: '10px', }}>Keresés</Button>
+          </Form>
         </Col>
-     </Row>
+          <Col className="flex-item2" sm={2} id='masodikoszlop(BB)' style={{ width: '12.5rem',height:'12.5rem'}}>
+            <Card style={{width:'100%',height:'100%', backgroundColor: '#F5A32E',borderRadius: '0', /*marginRight: '10px'*/}}>
+              <Card.Title>Kepkep</Card.Title>
+              <p>2</p>
+              {/* Kártya tartalma */}
+            </Card>
+          </Col>
+      </Row>      
+      </Col>
+
+      <Col sm={6} id='masodikfoszlop'>
+        <Row sm={8} id='masodiksor(a)'>
+          <Col className="flex-item3" sm={7} id='masodikoszlop(a)' style={{ width: '25rem',height:'25rem'}}>
+            <Card style={{width: '100%', height: '50%',backgroundColor: '#5EBE86',borderRadius: '0', /*marginBottom: '5px'*/}}>
+            <CardBody style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'space-between' }}></CardBody>
+              <Card.Title>Munkavállalóknak</Card.Title>
+                {/* Kártya tartalma */}
+              </Card>
+            <Card  style={{width: '100%', height: '50%',backgroundColor: '#00b26b',borderRadius: '0',/* margin: '5px'*/}}>
+              <Card.Title>Rólunk</Card.Title>
+                <p>4</p>
+                {/* Kártya tartalma */}
+            </Card>
+          </Col>
+          <Col className="flex-item3" sm={2} id='masodikoszlop(b)' style={{ width: '12.5rem',height:'25rem'}}>
+            <Card  style={{width: '100%', height: '100%', backgroundColor: '#00b26b',borderRadius: '0', /*margin: '5px'*/}}>
+            <Card.Title>Kep</Card.Title>
+              <p>5</p>
+              {/* Kártya tartalma */}
+            </Card>
+          </Col>
+        </Row>
+        <Row sm={4}id='masodiksor(b)' >
+          <Col className="flex-item4" sm={4} style={{ width: '12.5rem',height:'12.5rem'}}>
+            <Card style={{ width: '100%',height:'100%', backgroundColor: '#5EBE86',borderRadius: '0', /*marginRight: '5px'*/}}>
+            <CardBody style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'space-between' }}></CardBody>
+              <Card.Title>Cégeknek</Card.Title>
+              {/* Kártya tartalma */}
+            </Card>
+          </Col>
+          <Col className="flex-item4" sm={4} style={{ width: '12.5rem',height:'12.5rem'}}>
+            <Card style={{ width: '100%',height:'100%', backgroundColor: '#00b26b',borderRadius: '0',/* marginRight: '5px'*/}}>
+                <CardBody style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'space-between' }}></CardBody>
+
+                <Card.Title>Irodáink</Card.Title>
+                {/* Kártya tartalma */}
+            </Card>
+          </Col>
+          <Col className="flex-item4"  style={{ width: '12.5rem',height:'12.5rem'}}>
+            <Card style={{width: '100%',height:'100%', backgroundColor: '#00b26b',borderRadius: '0', /*margin: '5px',*/}}>
+            <CardBody style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'space-between' }}></CardBody>
+              <Card.Title>CV-generátor</Card.Title>
+              {/* Kártya tartalma */}
+            </Card>
+          </Col>
+        </Row>      
+      </Col>
+    </Row>
+    </div>
     <footer>
       <Navbar bg="dark" variant="dark" expand="lg" className="bg-transparent" >
         <Nav className="w-100 justify-content-end" style={{backgroundcolor: '#1A1F37'}}> 
